@@ -431,7 +431,7 @@ margin-top:15px;
 .announcement-bar{
 
     width:100%;
-    background:linear-gradient(90deg,#2563eb,#4f46e5);
+    background:linear-gradient(180deg,#6F8AC7,#8988A6);
     color:white;
     height:42px;
     display:flex;
@@ -454,6 +454,7 @@ margin-top:15px;
     /* Scroll Speed */
     animation:scrollBanner 35s linear infinite;
     will-change: transform;
+color:white;
 }
 
 /*.announcement-track span{flex:none;}*/
@@ -463,6 +464,13 @@ margin-top:15px;
     gap:60px;
     padding-right:60px;
     white-space:nowrap;
+align-items:center;
+color:white;
+}
+
+.announcement-track a{
+    color:#F8FAFC;
+    text-decoration:none;
 }
 
 @keyframes scrollBanner{
