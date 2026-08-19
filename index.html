@@ -66,7 +66,7 @@
 <a href="#contact">Contact</a>
 </nav>
 
-<a href="#" class="nav-button">Donate</a>
+<a href="#" class="nav-button qr-trigger">Donate</a>
 
 </div>
 
@@ -303,9 +303,7 @@ Apply for funding to support your athletic goals. Support can be in the form of 
 Support your athletic community. Support Own Code Athletics.
 </p>
 
-<a href="#" class="primary-btn">
-Donate
-</a>
+<a href="#" class="primary-btn qr-trigger">Donate</a>
 
 </div>
 
@@ -346,6 +344,90 @@ Donate
 </div>
 
 </footer>
+
+<!-- QR CODE POPUP ============================================================ -->
+
+<div id="qrModal" class="qr-modal">
+
+    <div class="qr-modal-content">
+
+        <button class="qr-close" id="qrClose" aria-label="Close">
+            &times;
+        </button>
+
+        <h2>Support Own Code Athletics</h2>
+
+        <p>Scan the QR code below to donate.</p>
+
+        <img
+            src="images/CashApp QR.jpg"
+            alt="Donate to Own Code Athletics"
+            class="qr-image"
+        >
+
+        <p class="qr-popup-text">
+            Thank you for supporting Own Code Athletics!
+        </p>
+
+    </div>
+
+</div>
+
+<!-- QR CODE POPUP ============================================================ -->
+
+<script>
+
+const qrModal = document.getElementById("qrModal");
+const qrClose = document.getElementById("qrClose");
+const qrTriggers = document.querySelectorAll(".qr-trigger");
+
+
+// Open QR popup
+qrTriggers.forEach(function(button) {
+
+    button.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        qrModal.style.display = "flex";
+
+    });
+
+});
+
+
+// Close popup
+qrClose.addEventListener("click", function() {
+
+    qrModal.style.display = "none";
+
+});
+
+
+// Close when clicking outside popup
+qrModal.addEventListener("click", function(event) {
+
+    if (event.target === qrModal) {
+
+        qrModal.style.display = "none";
+
+    }
+
+});
+
+
+// Close with Escape key
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        qrModal.style.display = "none";
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
